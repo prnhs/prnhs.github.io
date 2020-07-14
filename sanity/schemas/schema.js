@@ -58,7 +58,7 @@ export default createSchema({
           type: 'string'
         },
         {
-          title: 'In School',
+          title: 'In-school',
           name: 'inschool',
           type: 'boolean'
         },
