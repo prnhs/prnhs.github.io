@@ -138,6 +138,47 @@ export default createSchema({
       }
     },
     {
+      title: 'Board Members',
+      name: 'boardmembers',
+      type: 'document',
+      icon: FaUser,
+      fields: [
+        {
+          title: 'Board Member Name',
+          name: 'name',
+          type: 'string'
+        },
+        {
+          title: 'Board Member Title',
+          name: 'title',
+          type: 'string'
+        },
+        {
+          title: 'Contact Email',
+          name: 'email',
+          type: 'string'
+        }
+      ]
+    },
+    {
+      title: 'Faculty Sponsors',
+      name: 'facultysponsors',
+      type: 'document',
+      icon: FaUser,
+      fields: [
+        {
+          title: 'Sponsor Name',
+          name: 'name',
+          type: 'string'
+        },
+        {
+          title: 'Contact Email',
+          name: 'email',
+          type: 'string'
+        }
+      ]
+    },
+    {
       title: 'Students',
       name: 'students',
       type: 'document',
