@@ -4,7 +4,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
-import { FaCog, FaBook, FaUser, FaHandPaperO } from 'react-icons/lib/fa'
+import { FaCog, FaBook, FaUser, FaHeart } from 'react-icons/lib/fa'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -45,7 +45,7 @@ export default createSchema({
       title: 'Volunteer Opportunities',
       name: 'opportunities',
       type: 'document',
-      icon: FaHandPaperO,
+      icon: FaHeart,
       fields: [
         {
           title: 'Opportunity Title',
@@ -79,7 +79,15 @@ export default createSchema({
           title: 'Link (optional)',
           name: 'link',
           type: 'string'
-        }
+        },
+        {
+          title: 'Slug',
+          name: 'slug',
+          type: 'slug',
+          options: {
+            source: 'title'
+          }
+        },
       ],
       initialValue: {
         inschool: false
